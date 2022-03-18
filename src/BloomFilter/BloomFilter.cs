@@ -1,15 +1,29 @@
-﻿namespace BloomFilter
+﻿using System.Collections;
+
+namespace BloomFilter
 {
     public class BloomFilter : IBloomFilter
     {
-        public bool Add(object target)
+        private const int hashSize = sizeof(int) * 8;
+        private readonly BitArray currentBitArray = new(hashSize, false);
+
+        public void Add(object target)
         {
-            throw new NotImplementedException();
+            var hash = GetHashCodeAsBitArray(target);
+            currentBitArray.Or(hash);
         }
 
         public bool Check(object target)
         {
-            throw new NotImplementedException();
+            var hash = GetHashCodeAsBitArray(target);
+            hash.Xor(currentBitArray);
+            return hash.Cast<bool>().All(x => !x);
+        }
+
+        private static BitArray GetHashCodeAsBitArray(object input)
+        {
+            var result = new BitArray(new int[] { input.GetHashCode() });
+            return result;
         }
     }
 }

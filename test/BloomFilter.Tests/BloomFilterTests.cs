@@ -4,7 +4,6 @@ namespace BloomFilter.Tests
 {
     public class BloomFilterTests
     {
-        [TestCase(null)]
         [TestCase(1234)]
         [TestCase("starwars")]
         public void ShouldReturnTrue_IfMatch(object target)
@@ -20,7 +19,6 @@ namespace BloomFilter.Tests
             Assert.IsTrue(actual);
         }
 
-        [TestCase(null)]
         [TestCase(1234)]
         [TestCase("starwars")]
         public void ShouldReturnFalse_WhenNoMatch(object target)
