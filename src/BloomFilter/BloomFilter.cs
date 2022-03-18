@@ -15,8 +15,9 @@ namespace BloomFilter
 
         public bool Check(object target)
         {
-            var hash = GetHashCodeAsBitArray(target);
-            hash.Xor(currentBitArray);
+            var targetHash = GetHashCodeAsBitArray(target);
+            var hash = new BitArray(targetHash);
+            hash.And(currentBitArray).Xor(targetHash);
             return hash.Cast<bool>().All(x => !x);
         }
 
