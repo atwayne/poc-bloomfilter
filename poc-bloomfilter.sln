@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloomFilter", "src\BloomFilter\BloomFilter.csproj", "{0420A911-D661-45B6-853D-DC93DC6449FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloomFilter.Tests", "test\BloomFilter.Tests\BloomFilter.Tests.csproj", "{E2A92881-7503-4937-AB68-BFCFBA9FEFCF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0420A911-D661-45B6-853D-DC93DC6449FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0420A911-D661-45B6-853D-DC93DC6449FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0420A911-D661-45B6-853D-DC93DC6449FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0420A911-D661-45B6-853D-DC93DC6449FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2A92881-7503-4937-AB68-BFCFBA9FEFCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2A92881-7503-4937-AB68-BFCFBA9FEFCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2A92881-7503-4937-AB68-BFCFBA9FEFCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2A92881-7503-4937-AB68-BFCFBA9FEFCF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FA8062AF-EBE3-4D03-82AC-3493BEE181D6}
+	EndGlobalSection
+EndGlobal
